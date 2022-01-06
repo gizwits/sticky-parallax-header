@@ -39,7 +39,9 @@ class DetailsHeader extends React.Component {
       rightTopIconOnPress,
       leftTopIcon,
       rightTopIcon,
-      search
+      search,
+      left,
+      right
     } = this.props;
 
     const opacity = this.scrollY.y.interpolate({
@@ -54,10 +56,12 @@ class DetailsHeader extends React.Component {
           {/* <TouchableOpacity hitSlop={sizes.hitSlop} onPress={leftTopIconOnPress}>
             <Image style={styles.icon} resizeMode="contain" source={leftTopIcon} />
           </TouchableOpacity> */}
+          {left}
           <Animated.View style={[styles.headerTitleContainer, { opacity }]}>
             {/* <Text style={styles.headerTitle}>{user.label}</Text> */}
             {search && search}
           </Animated.View>
+          {right}
           {/* <TouchableOpacity hitSlop={sizes.hitSlop} onPress={rightTopIconOnPress}>
             <Image style={styles.icon} resizeMode="contain" source={rightTopIcon} />
           </TouchableOpacity> */}
@@ -181,7 +185,6 @@ class DetailsHeader extends React.Component {
         <StickyParallaxHeader
           foreground={this.renderForeground(user)}
           header={this.renderHeader(user)}
-          search={search}
           tabs={tabs}
           deviceWidth={constants.deviceWidth}
           parallaxHeight={parallaxHeight}
@@ -250,6 +253,8 @@ DetailsHeader.propTypes = {
   tabsContainerStyle: ViewPropTypes.style,
   tabBackgroundColor: string,
   tabBarUnderlineStyle: ViewPropTypes.style,
+  left: func,
+  right: func
 };
 DetailsHeader.defaultProps = {
   leftTopIconOnPress: () => {},

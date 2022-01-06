@@ -207,7 +207,7 @@ class StickyParallaxHeader extends Component {
   };
 
   renderHeader = () => {
-    const { header, headerHeight, backgroundColor, transparentHeader, search } = this.props;
+    const { header, headerHeight, backgroundColor, transparentHeader } = this.props;
 
     const headerStyle = header.props.style;
     const isArray = Array.isArray(headerStyle);
