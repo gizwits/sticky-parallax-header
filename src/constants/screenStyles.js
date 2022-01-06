@@ -1,4 +1,5 @@
 import { StyleSheet, Platform } from 'react-native';
+import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 import { ifIphoneX } from '../utils';
 import colors from './colors';
 import constants from './constants';
@@ -38,8 +39,9 @@ const screenStyles = StyleSheet.create({
   },
   headerWrapper: {
     width: '100%',
+    flex: 1,
     paddingHorizontal: 24,
-    paddingTop: Platform.select({ ios: ifIphoneX(50, 40), android: 55 }),
+    paddingTop: getStatusBarHeight(),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
