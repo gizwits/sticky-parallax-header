@@ -2,18 +2,18 @@ import React from 'react';
 import { AvatarHeader, TabbedHeader, DetailsHeader } from './predefinedComponents';
 import StickyParallaxHeader from './StickyParallaxHeader';
 
-const index = (props) => {
+const index = React.forwardRef((props, ref) => {
   // eslint-disable-next-line react/prop-types
   switch (props.headerType) {
     case 'TabbedHeader':
-      return <TabbedHeader {...props} />;
+      return <TabbedHeader ref={ref} {...props} />;
     case 'AvatarHeader':
-      return <AvatarHeader {...props} />;
+      return <AvatarHeader ref={ref} {...props} />;
     case 'DetailsHeader':
-      return <DetailsHeader {...props} />;
+      return <DetailsHeader ref={ref} {...props} />;
     default:
-      return <StickyParallaxHeader {...props} />;
+      return <StickyParallaxHeader ref={ref} {...props} />;
   }
-};
+});
 
 export default index;

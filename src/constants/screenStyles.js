@@ -41,7 +41,7 @@ const screenStyles = StyleSheet.create({
     width: '100%',
     flex: 1,
     paddingHorizontal: 24,
-    paddingTop: getStatusBarHeight(),
+    marginTop: getStatusBarHeight(true),
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

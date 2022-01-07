@@ -44,11 +44,11 @@ class DetailsHeader extends React.Component {
       right
     } = this.props;
 
-    const opacity = this.scrollY.y.interpolate({
-      inputRange: [0, this.scrollPosition(60), this.scrollPosition(90)],
-      outputRange: [0, 0, 1],
-      extrapolate: 'clamp',
-    });
+    // const opacity = this.scrollY.y.interpolate({
+    //   inputRange: [0, this.scrollPosition(60), this.scrollPosition(90)],
+    //   outputRange: [0, 0, 1],
+    //   extrapolate: 'clamp',
+    // });
 
     return (
       <View style={[styles.headerWrapper, { backgroundColor }]}>
@@ -57,10 +57,10 @@ class DetailsHeader extends React.Component {
             <Image style={styles.icon} resizeMode="contain" source={leftTopIcon} />
           </TouchableOpacity> */}
           {left}
-          <Animated.View style={[styles.headerTitleContainer, { opacity }]}>
-            {/* <Text style={styles.headerTitle}>{user.label}</Text> */}
+          {/* <Animated.View style={[styles.headerTitleContainer, { opacity }]}>
+            <Text style={styles.headerTitle}>{user.label}</Text>
             {search && search}
-          </Animated.View>
+          </Animated.View> */}
           {right}
           {/* <TouchableOpacity hitSlop={sizes.hitSlop} onPress={rightTopIconOnPress}>
             <Image style={styles.icon} resizeMode="contain" source={rightTopIcon} />
