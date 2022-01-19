@@ -124,7 +124,7 @@ class ScrollableTabBar extends React.PureComponent {
           {
             // backgroundColor: tabsContainerBackgroundColor,
             backgroundColor: tabBackgroundColor,
-            marginBottom:10
+            marginBottom:3
           },
         ]}>
         <ScrollView

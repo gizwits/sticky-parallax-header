@@ -172,7 +172,8 @@ class DetailsHeader extends React.Component {
       tabWrapperStyle,
       tabsContainerStyle,
       tabBackgroundColor,
-      tabBarUnderlineStyle
+      tabBarUnderlineStyle,
+      backgroundHeight
     } = this.props;
 
     if (renderBody) {
@@ -199,6 +200,7 @@ class DetailsHeader extends React.Component {
           backgroundImage={backgroundImage}
           transparentHeader={transparentHeader}
           scrollRef={scrollRef}
+          headerBackgroundHeight={backgroundHeight}
 
           tabTextStyle={tabTextStyle}
           tabTextActiveStyle={tabTextActiveStyle}
@@ -254,7 +256,8 @@ DetailsHeader.propTypes = {
   tabBackgroundColor: string,
   tabBarUnderlineStyle: ViewPropTypes.style,
   left: func,
-  right: func
+  right: func,
+  backgroundHeight: number,
 };
 DetailsHeader.defaultProps = {
   leftTopIconOnPress: () => {},
@@ -286,7 +289,8 @@ DetailsHeader.defaultProps = {
   tabTextContainerActiveStyle: styles.tabTextContainerActiveStyle,
   tabWrapperStyle: styles.tabsWrapper,
   tabBackgroundColor: Brandon.color,
-  tabBarUnderlineStyle: {}
+  tabBarUnderlineStyle: {},
+  backgroundHeight: 300
 };
 
 export default DetailsHeader;

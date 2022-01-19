@@ -37,7 +37,7 @@ class StickyParallaxHeader extends Component {
       containerWidth: width,
       currentPage: initialPage,
       isFolded: false,
-      height: 300
+      height: props.headerBackgroundHeight
     };
     this.scrollY = new ValueXY();
   }
