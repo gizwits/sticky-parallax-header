@@ -1,17 +1,5 @@
 import React, { Component } from 'react';
-import {
-  bool,
-  func,
-  node,
-  number,
-  shape,
-  string,
-  oneOfType,
-  oneOf,
-  instanceOf,
-  element,
-} from 'prop-types';
-import { Dimensions, ScrollView, View, Animated, Easing, ViewPropTypes, Image, ImageBackground } from 'react-native';
+import { Dimensions, ScrollView, View, Animated, Easing, Image, ImageBackground } from 'react-native';
 import { ScrollableTabBar, ScrollableTabView, HeaderBackgroundImage } from './components';
 import { constants } from './constants';
 import styles from './styles';
@@ -442,45 +430,6 @@ class StickyParallaxHeader extends Component {
   }
 }
 
-StickyParallaxHeader.propTypes = {
-  background: node,
-  backgroundColor: string,
-  backgroundImage: Image.propTypes.source,
-  bounces: bool,
-  children: node,
-  contentContainerStyles: ViewPropTypes.style,
-  foreground: node,
-  header: node,
-  headerHeight: number,
-  headerSize: func.isRequired,
-  initialPage: number,
-  onChangeTab: func,
-  onEndReached: func,
-  parallaxHeight: number,
-  rememberTabScrollPosition: bool,
-  scrollEvent: func,
-  snapToEdge: bool,
-  tabTextActiveStyle: shape({}),
-  tabTextContainerActiveStyle: shape({}),
-  tabTextContainerStyle: shape({}),
-  tabTextStyle: shape({}),
-  tabs: ScrollableTabBar.propTypes.tabs,
-  tabsContainerBackgroundColor: string,
-  tabWrapperStyle: ViewPropTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  snapStartThreshold: oneOfType([bool, number]),
-  snapStopThreshold: oneOfType([bool, number]),
-  snapValue: oneOfType([bool, number]),
-  transparentHeader: bool,
-  onRef: func,
-  onTopReached: func,
-  scrollRef: oneOfType([func, shape({ current: instanceOf(ScrollView) })]),
-  keyboardShouldPersistTaps: oneOf(['never', 'always', 'handled', false, true, undefined]),
-  refreshControl: element,
-  onMomentumScrollEnd: func,
-  onMomentumScrollBegin: func,
-  decelerationRate: oneOf(['fast', 'normal']),
-};
 
 StickyParallaxHeader.defaultProps = {
   bounces: true,

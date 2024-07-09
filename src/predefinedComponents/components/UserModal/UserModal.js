@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity, Animated, StatusBar, Platform } from 'react-native';
-import { func, shape, string, oneOfType, object, array, number } from 'prop-types';
 import StickyParallaxHeader from '../../../StickyParallaxHeader';
 import { constants, sizes } from '../../../constants';
 import styles from './UserModal.styles';
@@ -259,14 +258,5 @@ class UserModal extends React.Component {
     );
   }
 }
-
-UserModal.propTypes = {
-  onPressCloseModal: func,
-  user: shape({
-    author: string,
-    about: string,
-    image: oneOfType([object, array, func, number]),
-  }),
-};
 
 export default UserModal;

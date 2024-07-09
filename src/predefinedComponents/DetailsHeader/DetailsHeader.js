@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, Image, TouchableOpacity, StatusBar, Animated, ScrollView, ViewPropTypes } from 'react-native';
-import { bool, number, func, string, node, oneOfType, shape, instanceOf, arrayOf } from 'prop-types';
 import StickyParallaxHeader from '../../StickyParallaxHeader';
 import { constants, sizes } from '../../constants';
 import { Brandon } from '../../assets/data/cards';
@@ -220,45 +219,6 @@ class DetailsHeader extends React.Component {
   }
 }
 
-DetailsHeader.propTypes = {
-  leftTopIconOnPress: func,
-  rightTopIconOnPress: func,
-  leftTopIcon: Image.propTypes.source,
-  rightTopIcon: Image.propTypes.source,
-  backgroundColor: string,
-  headerHeight: number,
-  backgroundImage: Image.propTypes.source,
-  title: string,
-  tag: string,
-  image: Image.propTypes.source,
-  children: node,
-  renderBody: func,
-  bounces: bool,
-  snapToEdge: bool,
-  hasBorderRadius: bool,
-  iconNumber: number,
-  parallaxHeight: number,
-  transparentHeader: bool,
-  foreground: func,
-  headerSize: func,
-  scrollRef: oneOfType([func, shape({ current: instanceOf(ScrollView) })]),
-  onMomentumScrollEnd: func,
-  onMomentumScrollBegin: func,
-  search: func,
-  tabs: arrayOf(shape({})),
-  tabTextStyle: Text.propTypes.style,
-  tabTextActiveStyle: Text.propTypes.style,
-  tabTextContainerStyle: ViewPropTypes.style,
-  tabTextContainerActiveStyle: ViewPropTypes.style,
-  tabWrapperStyle: ViewPropTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  tabBackgroundColor: string,
-  tabBarUnderlineStyle: ViewPropTypes.style,
-  left: func,
-  right: func,
-  backgroundHeight: number,
-};
 DetailsHeader.defaultProps = {
   leftTopIconOnPress: () => {},
   rightTopIconOnPress: () => {},

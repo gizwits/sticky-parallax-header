@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, Platform } from 'react-native';
-import { shape } from 'prop-types';
 import { QuizListElement } from '../../components';
 import { sizes, constants } from '../../../constants';
 import styles from '../../TabbedHeader/TabbedHeader.styles';
@@ -68,10 +67,6 @@ const RenderContent = ({ user }) => {
       ))}
     </View>
   );
-};
-
-RenderContent.propTypes = {
-  user: shape({}),
 };
 
 RenderContent.defaultProps = {

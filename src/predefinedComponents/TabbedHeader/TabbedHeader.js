@@ -1,18 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StatusBar, Animated, ViewPropTypes, ScrollView } from 'react-native';
-import {
-  arrayOf,
-  bool,
-  number,
-  shape,
-  string,
-  func,
-  node,
-  element,
-  oneOfType,
-  oneOf,
-  instanceOf,
-} from 'prop-types';
+
 import StickyParallaxHeader from '../../StickyParallaxHeader';
 import { constants, colors, sizes } from '../../constants';
 import styles from './TabbedHeader.styles';
@@ -234,43 +222,6 @@ export default class TabbedHeader extends React.Component {
     );
   }
 }
-
-TabbedHeader.propTypes = {
-  backgroundColor: string,
-  headerHeight: number,
-  backgroundImage: Image.propTypes.source,
-  title: string,
-  bounces: bool,
-  snapToEdge: bool,
-  tabs: arrayOf(shape({})),
-  renderBody: func,
-  children: node,
-  logo: Image.propTypes.source,
-  logoResizeMode: string,
-  logoStyle: ViewPropTypes.style,
-  logoContainerStyle: ViewPropTypes.style,
-  tabTextStyle: Text.propTypes.style,
-  tabTextActiveStyle: Text.propTypes.style,
-  tabTextContainerStyle: ViewPropTypes.style,
-  tabTextContainerActiveStyle: ViewPropTypes.style,
-  scrollEvent: func,
-  tabWrapperStyle: ViewPropTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  foregroundImage: Image.propTypes.source,
-  contentContainerStyles: ViewPropTypes.style,
-  scrollRef: oneOfType([func, shape({ current: instanceOf(ScrollView) })]),
-  keyboardShouldPersistTaps: oneOf(['never', 'always', 'handled', false, true, undefined]),
-  refreshControl: element,
-  rememberTabScrollPosition: bool,
-  titleStyle: Text.propTypes.style,
-  header: func,
-  onRef: func,
-  parallaxHeight: number,
-  foreground: func,
-  headerSize: func,
-  onMomentumScrollEnd: func,
-  onMomentumScrollBegin: func,
-};
 
 TabbedHeader.defaultProps = {
   backgroundColor: colors.primaryGreen,

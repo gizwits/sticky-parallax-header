@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
-import { func, string, shape, bool, number } from 'prop-types';
 import styles from './QuizCard.styles';
 import QuizOption from '../QuizOption/QuizOption';
 
@@ -31,17 +30,5 @@ const QuizCard = ({ data: { question, cards }, num, onPress, cardsAmount }) => {
   );
 };
 
-QuizCard.propTypes = {
-  onPress: func,
-  data: shape({
-    number: string,
-    question: string,
-    value: bool,
-    revealed: bool,
-    picked: bool,
-  }),
-  num: number,
-  cardsAmount: number,
-};
 
 export default QuizCard;

@@ -6,21 +6,8 @@ import {
   TouchableOpacity,
   Animated,
   StatusBar,
-  ViewPropTypes,
   ScrollView,
 } from 'react-native';
-import {
-  func,
-  string,
-  number,
-  bool,
-  oneOfType,
-  oneOf,
-  instanceOf,
-  element,
-  shape,
-  node,
-} from 'prop-types';
 import StickyParallaxHeader from '../../StickyParallaxHeader';
 import { constants, sizes } from '../../constants';
 import styles from './AvatarHeader.styles';
@@ -279,38 +266,6 @@ class AvatarHeader extends React.Component {
   }
 }
 
-AvatarHeader.propTypes = {
-  hasBorderRadius: bool,
-  bounces: bool,
-  snapToEdge: bool,
-  leftTopIconOnPress: func,
-  rightTopIconOnPress: func,
-  leftTopIcon: Image.propTypes.source,
-  rightTopIcon: Image.propTypes.source,
-  backgroundColor: string,
-  headerHeight: number,
-  backgroundImage: Image.propTypes.source,
-  contentContainerStyles: ViewPropTypes.style,
-  title: string,
-  subtitle: string,
-  image: Image.propTypes.source,
-  children: node,
-  renderBody: func,
-  scrollEvent: func,
-  parallaxHeight: number,
-  foreground: func,
-  header: func,
-  snapStartThreshold: oneOfType([bool, number]),
-  snapStopThreshold: oneOfType([bool, number]),
-  snapValue: oneOfType([bool, number]),
-  transparentHeader: bool,
-  scrollRef: oneOfType([func, shape({ current: instanceOf(ScrollView) })]),
-  keyboardShouldPersistTaps: oneOf(['never', 'always', 'handled', false, true, undefined]),
-  refreshControl: element,
-  headerSize: func,
-  onMomentumScrollEnd: func,
-  onMomentumScrollBegin: func,
-};
 AvatarHeader.defaultProps = {
   leftTopIconOnPress: () => {},
   rightTopIconOnPress: () => {},

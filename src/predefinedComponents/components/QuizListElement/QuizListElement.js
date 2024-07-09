@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
-import { func, string, number } from 'prop-types';
 import styles from './QuizListElement.styles';
 import { colors } from '../../../constants';
 
@@ -37,15 +36,5 @@ const QuizListElement = ({
     </View>
   </TouchableOpacity>
 );
-
-QuizListElement.propTypes = {
-  onPress: func,
-  authorName: string,
-  mainText: string,
-  labelText: string,
-  elements: number,
-  imageSource: Image.propTypes.source,
-  pressUser: func,
-};
 
 export default QuizListElement;

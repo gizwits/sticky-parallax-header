@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import { string, bool, shape, func } from 'prop-types';
 import styles from './QuizOption.styles';
 import { colors } from '../../../constants';
 
@@ -64,15 +63,5 @@ const QuizOption = ({ reveal, revealed, card: { number, question, value } }) => 
   );
 };
 
-QuizOption.propTypes = {
-  card: shape({
-    number: string,
-    question: string,
-    value: bool,
-    picked: bool,
-  }),
-  reveal: func,
-  revealed: bool,
-};
 
 export default QuizOption;
