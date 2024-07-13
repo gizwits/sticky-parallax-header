@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity, StatusBar, Animated, ScrollView, ViewPropTypes } from 'react-native';
+import { Text, View, Image, TouchableOpacity, StatusBar, Animated } from 'react-native';
 import StickyParallaxHeader from '../../StickyParallaxHeader';
 import { constants, sizes } from '../../constants';
 import { Brandon } from '../../assets/data/cards';

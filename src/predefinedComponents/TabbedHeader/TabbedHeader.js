@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, StatusBar, Animated, ViewPropTypes, ScrollView } from 'react-native';
+import { Text, View, Image, StatusBar, Animated } from 'react-native';
 
 import StickyParallaxHeader from '../../StickyParallaxHeader';
 import { constants, colors, sizes } from '../../constants';

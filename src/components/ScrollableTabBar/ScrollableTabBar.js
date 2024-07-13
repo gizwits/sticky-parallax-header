@@ -1,7 +1,7 @@
 /* eslint-disable react/forbid-prop-types */
 /* eslint-disable no-return-assign */
 import React from 'react';
-import { Animated, Text, TouchableOpacity, View, ScrollView, ViewPropTypes } from 'react-native';
+import { Animated, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import { arrayOf, func, number, object, shape, string, element, oneOfType } from 'prop-types';
 import { constants } from '../../constants';
 import styles from './ScrollableTabBar.styles';
@@ -197,18 +197,4 @@ class ScrollableTabBar extends React.PureComponent {
   }
 }
 
-ScrollableTabBar.propTypes = {
-  activeTab: number,
-  goToPage: func,
-  scrollValue: object,
-  tabs: arrayOf(shape({ content: element, title: string, icon: oneOfType([element, func]) })),
-  tabTextStyle: shape({}),
-  tabTextActiveStyle: shape({}),
-  tabTextContainerStyle: shape({}),
-  tabTextContainerActiveStyle: shape({}),
-  tabsContainerBackgroundColor: string,
-  tabWrapperStyle: ViewPropTypes.style,
-  tabsContainerStyle: ViewPropTypes.style,
-  tabBackgroundColor: string,
-};
 export default ScrollableTabBar;

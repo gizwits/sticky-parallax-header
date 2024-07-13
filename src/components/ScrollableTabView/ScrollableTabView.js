@@ -1,7 +1,6 @@
 /* eslint-disable react/destructuring-assignment  */
 import React from 'react';
-import { Animated, StyleSheet, View, ViewPropTypes } from 'react-native';
-import { bool, func, node, number, oneOf } from 'prop-types';
+import { Animated, StyleSheet, View } from 'react-native';
 import SceneComponent from './SceneComponent';
 import constants from '../../constants/constants';
 import { getSafelyScrollNode } from '../../utils';
@@ -242,18 +241,6 @@ class ScrollableTabView extends React.Component {
     );
   }
 }
-
-ScrollableTabView.propTypes = {
-  children: node,
-  contentContainerStyles: ViewPropTypes.style,
-  initialPage: number,
-  page: number,
-  onChangeTab: func,
-  swipedPage: func,
-  minScrollHeight: number,
-  keyboardShouldPersistTaps: oneOf(['never', 'always', 'handled', false, true, undefined]),
-  scrollEnabled: bool.isRequired,
-};
 
 ScrollableTabView.defaultProps = {
   contentContainerStyles: {},
