@@ -2,7 +2,6 @@
 /* eslint-disable no-return-assign */
 import React from 'react';
 import { Animated, Text, TouchableOpacity, View, ScrollView } from 'react-native';
-import { arrayOf, func, number, object, shape, string, element, oneOfType } from 'prop-types';
 import { constants } from '../../constants';
 import styles from './ScrollableTabBar.styles';
 

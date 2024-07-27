@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { node } from 'prop-types';
 import StaticContainer from './StaticContainer';
 
 const SceneComponent = (Props) => {
@@ -14,8 +13,5 @@ const SceneComponent = (Props) => {
   );
 };
 
-SceneComponent.propTypes = {
-  children: node,
-};
 
 export default SceneComponent;

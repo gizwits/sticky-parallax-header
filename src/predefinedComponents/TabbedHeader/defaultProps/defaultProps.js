@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { string } from 'prop-types';
 import { View, Text, Platform } from 'react-native';
 import { QuizListElement } from '../../components';
 import { Brandon, Jennifer, Ewa } from '../../../assets/data/cards';
@@ -58,10 +57,6 @@ const RenderContent = ({ title }) => {
       )}
     </View>
   );
-};
-
-RenderContent.propTypes = {
-  title: string,
 };
 
 RenderContent.defaultProps = {
